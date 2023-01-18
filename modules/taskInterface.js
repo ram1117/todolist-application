@@ -13,7 +13,14 @@ export default class TaskInterface {
     this.newListItem = null;
     this.task = null;
     this.todoInputElement.onkeyup = (event) => {
-      if (event.key === 'Enter') {
+      if (event.key === 'Enter' && this.todoInputElement.value !== '') {
+        this.addTask();
+      }
+    };
+
+    this.enterButton = document.querySelector('#enter-button');
+    this.enterButton.onclick = () => {
+      if (this.todoInputElement.value !== '') {
         this.addTask();
       }
     };

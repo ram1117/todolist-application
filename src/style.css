@@ -54,16 +54,14 @@ body {
   padding: 5%;
 }
 
-.button-clear:hover {
+.button-clear:hover,
+.button-delete:hover,
+#enter-button {
   cursor: pointer;
 }
 
 .button-more:hover {
   cursor: move;
-}
-
-.button-delete:hover {
-  cursor: pointer;
 }
 
 .strike-through {

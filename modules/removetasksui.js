@@ -15,12 +15,13 @@ export default class RemovetasksUI {
 
   removeCompletedTasks() {
     this.taskarray = Storage.getTaskArray();
+    const arr = [];
     this.taskarray.forEach((task) => {
-      if (task.completed) {
-        this.taskarray.splice(this.taskarray.indexOf(task), 1);
+      if (!task.completed) {
+        arr.push(task);
       }
     });
-    Storage.setTaskArray(this.taskarray);
+    Storage.setTaskArray(arr);
     const taskUI = new TaskInterface();
     taskUI.updateTaskId();
     taskUI.loadTasks();
