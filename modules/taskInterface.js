@@ -23,7 +23,7 @@ export default class TaskInterface {
       if (this.todoInputElement.value !== '') {
         this.addTask();
       }
-    }
+    };
 
     // add event listener to list and check targets
 
