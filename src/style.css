@@ -13,6 +13,7 @@ body {
 .todo-list {
   display: flex;
   flex-direction: column;
+  list-style: none;
   box-shadow: 2px 2px 2px 2px rgb(129, 125, 125);
 }
 
@@ -20,35 +21,54 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2% 5%;
+  padding: 0% 5%;
   font-size: 1.2em;
+  text-decoration: none;
   border-bottom: solid 0.5px rgb(129, 125, 125);
 }
 
 #todolist-header {
   font-size: 1.2em;
   font-weight: 700;
+  padding: 5% 0;
 }
 
-#todolist-input {
+#todolist-input,
+.task-details {
+  padding: 5% 0;
   border: none;
-}
-
-#todolist-input:focus {
   outline: none;
 }
 
 .task-details {
   width: 90%;
-  padding: 0 5%;
+  padding: 5% 5%;
   text-align: left;
+  height: 100%;
 }
 
-.button-remove {
+.button-clear {
   text-align: center;
   font-size: 1.2em;
   background-color: rgb(228, 226, 226);
-  padding: 2%;
+  padding: 5%;
+}
+
+.button-clear:hover {
+  cursor: pointer;
+}
+
+.button-more:hover {
+  cursor: move;
+}
+
+.button-delete:hover {
+  cursor: pointer;
+}
+
+.strike-through {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
 }
 
 @media screen and (min-width: 768px) {
