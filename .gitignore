@@ -12,5 +12,3 @@ hint-report/
 #ignoring esLint linter files
 .eslintrc.json
 
-#ignoring dist folder
-dist/

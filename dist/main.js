@@ -9,6 +9,17 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./modules/removetasksui.js":
+/*!**********************************!*\
+  !*** ./modules/removetasksui.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ RemovetasksUI)\n/* harmony export */ });\n/* harmony import */ var _storage_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./storage.js */ \"./modules/storage.js\");\n/* harmony import */ var _taskInterface_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./taskInterface.js */ \"./modules/taskInterface.js\");\n\n\n\nclass RemovetasksUI {\n  constructor() {\n    this.removeBtn = document.querySelector('#button-clear');\n    this.taskarray = null;\n  }\n\n  addClickListener() {\n    this.removeBtn.onclick = () => {\n      this.removeCompletedTasks();\n    };\n  }\n\n  removeCompletedTasks() {\n    this.taskarray = _storage_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"].getTaskArray();\n    this.taskarray.forEach((task) => {\n      if (task.completed) {\n        this.taskarray.splice(this.taskarray.indexOf(task), 1);\n      }\n    });\n    _storage_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"].setTaskArray(this.taskarray);\n    const taskUI = new _taskInterface_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"]();\n    taskUI.updateTaskId();\n    taskUI.loadTasks();\n  }\n}\n\n//# sourceURL=webpack://todolist-application/./modules/removetasksui.js?");
+
+/***/ }),
+
 /***/ "./modules/storage.js":
 /*!****************************!*\
   !*** ./modules/storage.js ***!
@@ -169,7 +180,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_taskInterface_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../modules/taskInterface.js */ \"./modules/taskInterface.js\");\n\n\n\nwindow.onload = () => {\n  const taskUI = new _modules_taskInterface_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"]();\n  taskUI.loadTasks();\n};\n\n//# sourceURL=webpack://todolist-application/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_taskInterface_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../modules/taskInterface.js */ \"./modules/taskInterface.js\");\n/* harmony import */ var _modules_removetasksui_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../modules/removetasksui.js */ \"./modules/removetasksui.js\");\n\n\n\n\nwindow.onload = () => {\n  const taskUI = new _modules_taskInterface_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"]();\n  taskUI.loadTasks();\n  const removeUi = new _modules_removetasksui_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\n  removeUi.addClickListener();\n};\n\n//# sourceURL=webpack://todolist-application/./src/index.js?");
 
 /***/ })
 
