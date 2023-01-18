@@ -13,6 +13,7 @@ body {
 .todo-list {
   display: flex;
   flex-direction: column;
+  list-style: none;
   box-shadow: 2px 2px 2px 2px rgb(129, 125, 125);
 }
 
@@ -22,6 +23,7 @@ body {
   align-items: center;
   padding: 2% 5%;
   font-size: 1.2em;
+  text-decoration: none;
   border-bottom: solid 0.5px rgb(129, 125, 125);
 }
 
@@ -44,11 +46,19 @@ body {
   text-align: left;
 }
 
-.button-remove {
+.button-clear {
   text-align: center;
   font-size: 1.2em;
   background-color: rgb(228, 226, 226);
   padding: 2%;
+}
+
+.button-clear:hover {
+  cursor: pointer;
+}
+
+.button-more:hover {
+  cursor: move;
 }
 
 @media screen and (min-width: 768px) {
