@@ -146,7 +146,7 @@ export default class TaskInterface {
     this.newListItem = listItem;
     listItem.classList.add('todo-list-item', 'todo-list-task');
     listItem.id = task.id;
-    listItem.draggable='true';
+    listItem.draggable = 'true';
 
     const checkBox = document.createElement('input');
     checkBox.type = 'checkbox';
