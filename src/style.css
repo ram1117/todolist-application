@@ -69,6 +69,22 @@ body {
   text-decoration-thickness: 2px;
 }
 
+.help-menu{
+  margin: 10% auto;
+  padding: 5% 5%;
+  box-shadow: 2px 2px 2px 2px rgb(129, 125, 125);
+}
+
+.help-menu > h3{
+  font-size: 1.5em;
+  font-weight: 800;
+}
+
+.help-menu > ul {
+  font-size: 1.2em;
+  padding: 5% 5%;
+}
+
 @media screen and (min-width: 768px) {
   body {
     width: 40%;
