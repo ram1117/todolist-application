@@ -1,9 +1,6 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="readme-assets/murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
 
   <h3><b>Minimalist ToDo List</b></h3>
 
