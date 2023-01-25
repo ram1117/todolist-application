@@ -1,5 +1,4 @@
 import taskUi from '../modules/taskInterface.js';
-jest.mock('../__mocks__/storage.js');
 
 describe('testing addTask and removeTask functions',()=>{
   document.body.innerHTML = `<ul class="todo-list" data-long-press-delay="1000">
@@ -16,7 +15,7 @@ describe('testing addTask and removeTask functions',()=>{
   test('testing removeTask()-- one <li> to be removed from <ul>', () => {
     const taskinterface = new taskUi();
     taskinterface.removeTask(0);
-    const todoList = document.querySelectorAll('.todo-list .todo-list-task');
+    const todoList = document.querySelectorAll('.todo-list-task');
     expect(todoList).toHaveLength(0);
   });
   
