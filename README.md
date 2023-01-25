@@ -129,6 +129,12 @@ Please refer to Github pages deployment guide.
 ## 👥 Authors <a name="authors"></a>
 
 
+👤 **Tonny Tei**
+- Github: [@teitonny](https://github.com/teitonny)
+- Twiter: [@TonnyTei](https://twitter.com/TonnyTei)
+- linkedIn: [TonnyTei](https://www.linkedin.com/in/tonny-tei-38a4771a0/
+
+
 👤 **Ram Kumar Karuppusamy**
 
 - GitHub: [@githubhandle](https://github.com/ram1117)

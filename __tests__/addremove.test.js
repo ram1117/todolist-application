@@ -1,4 +1,4 @@
-import taskUi from '../modules/taskInterface.js';
+import TaskUi from '../modules/taskInterface.js';
 
 describe('testing addTask and removeTask functions',()=>{
   document.body.innerHTML = `<ul class="todo-list" data-long-press-delay="1000">
@@ -7,7 +7,7 @@ describe('testing addTask and removeTask functions',()=>{
     <li class="button-clear"><div id="button-clear">Clear all completed</div></li>
   </ul>`;
   test('testing addTask()- one <li> to be added to <ul>', () => {
-    const taskinterface = new taskUi();
+    const taskinterface = new TaskUi();
     taskinterface.addTask();
     const todoList = document.querySelectorAll('.todo-list-task');
     expect(todoList).toHaveLength(1);
@@ -17,7 +17,7 @@ describe('testing addTask and removeTask functions',()=>{
     expect(JSON.parse(localStorage.getItem('task-array'))).toHaveLength(1);
   });
   test('testing removeTask()-- one <li> to be removed from <ul>', () => {
-    const taskinterface = new taskUi();
+    const taskinterface = new TaskUi();
     taskinterface.removeTask(0);
     const todoList = document.querySelectorAll('.todo-list-task');
     expect(todoList).toHaveLength(0);
