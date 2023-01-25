@@ -11,6 +11,10 @@ describe('testing addTask and removeTask functions',()=>{
     taskinterface.addTask();
     const todoList = document.querySelectorAll('.todo-list-task');
     expect(todoList).toHaveLength(1);
+    
+  });
+  test('testing addTask()-Local storage array has one object',()=>{
+    expect(JSON.parse(localStorage.getItem('task-array'))).toHaveLength(1);
   });
   test('testing removeTask()-- one <li> to be removed from <ul>', () => {
     const taskinterface = new taskUi();
@@ -18,6 +22,8 @@ describe('testing addTask and removeTask functions',()=>{
     const todoList = document.querySelectorAll('.todo-list-task');
     expect(todoList).toHaveLength(0);
   });
-  
+  test('testing removeTask()-Local storage array is empty',()=>{
+    expect(JSON.parse(localStorage.getItem('task-array'))).toHaveLength(0);
+  });  
 });
 
