@@ -1,9 +1,6 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="readme-assets/murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
 
   <h3><b>Minimalist ToDo List</b></h3>
 
@@ -127,6 +124,12 @@ Please refer to Github pages deployment guide.
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
+
+
+👤 **Tonny Tei**
+- Github: [@teitonny](https://github.com/teitonny)
+- Twiter: [@TonnyTei](https://twitter.com/TonnyTei)
+- linkedIn: [TonnyTei](https://www.linkedin.com/in/tonny-tei-38a4771a0/
 
 
 👤 **Ram Kumar Karuppusamy**
