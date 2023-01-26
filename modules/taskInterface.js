@@ -45,13 +45,10 @@ export default class TaskInterface {
     this.listItemEdit = target.parentNode;
     this.listItemEditField = this.listItemEdit.querySelector('.task-details');
     this.createEditWindow();
-    const arr = Storage.getTaskArray();
     const index = parseInt(this.listItemEdit.id, 10) - 1;
-    this.task = arr[index];
     this.listItemEditField.onkeyup = (event) => {
       if (event.key === 'Enter') {
-        this.task.details = this.listItemEditField.value;
-        Storage.setTaskArray(arr);
+        this.updateNewTaskDetails(index, this.listItemEditField.value);
         this.resetEditWindow();
       }
     };
@@ -69,6 +66,13 @@ export default class TaskInterface {
         this.resetEditWindow();
       }
     };
+  }
+
+  updateNewTaskDetails(index, text) {
+    this.task = null;
+    const arr = Storage.getTaskArray();
+    arr[index].details = text;
+    Storage.setTaskArray(arr);
   }
 
   createEditWindow() {
