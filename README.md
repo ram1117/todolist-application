@@ -104,7 +104,6 @@ Install module dependencies using npm.
 
 To run the project using Webpack devserver, execute the following command:
 
-
 ```sh
   npm run start
 ```
@@ -113,6 +112,8 @@ To run the project using Webpack devserver, execute the following command:
 
 To run the jest test cases , execute the following command after installing module dependecies:
 
+to add your own test cases, please add test and mock files to __tests__ and __mocks__ folder.
+ 
 ```sh
   npm test
 ```
