@@ -111,7 +111,11 @@ To run the project using Webpack devserver, execute the following command:
 
 ### Run tests
 
-Please feel free to add your own test cases.
+To run the jest test cases , execute the following command after installing module dependecies:
+
+```sh
+  npm test
+```
 
 ### Deployment
 

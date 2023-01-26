@@ -1,8 +1,8 @@
-import RemovetasksUI from "../modules/removetasksui";
-import Task from "../modules/task";
+import RemovetasksUI from '../modules/removetasksui';
+import Task from '../modules/task';
 
 describe('Removing multiple completed tasks:', () => {
-  let arr = [];
+  const arr = [];
   arr.push(new Task(arr.length + 1, 'task 1', true));
   arr.push(new Task(arr.length + 1, 'task 2', false));
   arr.push(new Task(arr.length + 1, 'task 3', true));
